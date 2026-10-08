@@ -1,4 +1,4 @@
-package dev.pahomov.taskflow;
+package dev.pahomov.taskflow.model;
 
 public enum TaskStatus
 {

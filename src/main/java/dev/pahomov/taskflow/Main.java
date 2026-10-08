@@ -1,6 +1,8 @@
 package dev.pahomov.taskflow;
 
-import dev.pahomov.taskflow.User;
+import java.util.NoSuchElementException;
+
+import dev.pahomov.taskflow.model.User;
 
 class Main
 {
@@ -21,7 +23,10 @@ class Main
 		user.getProject("Test Project2").createTask("Task-3");
 		user.getProject("Test Project2").createTask("Task-4");
 
-		user.getProject("Test Project2").deleteTask("Task-3");
+		try
+		{ user.getProject("Test Project2").deleteTask("Task-13"); }
+		catch (NoSuchElementException ex)
+		{ ex.printStackTrace(); }
 
 		user.getProject("Test Project2").printTasks();
 	}

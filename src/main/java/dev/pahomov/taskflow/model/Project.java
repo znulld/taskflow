@@ -1,7 +1,8 @@
-package dev.pahomov.taskflow;
+package dev.pahomov.taskflow.model;
 
 import java.util.List;
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 public class Project
 {
@@ -39,7 +40,7 @@ public class Project
 			}
 		}
 
-		System.out.println("There is no such task.");
+		throw new NoSuchElementException(String.format("%s There is no such task.", taskName));
 	}
 
 	public void printTasks()

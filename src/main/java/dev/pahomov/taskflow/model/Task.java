@@ -1,6 +1,6 @@
-package dev.pahomov.taskflow;
+package dev.pahomov.taskflow.model;
 
-import static dev.pahomov.taskflow.TaskStatus.*;
+import static dev.pahomov.taskflow.model.TaskStatus.*;
 
 public class Task
 {
@@ -23,4 +23,18 @@ public class Task
 	public String getName()
 	{ return this.name; }
 	// --- SET
+
+	public void start()
+	{ 
+		System.out.println("Starting task.."); 
+
+		status = TaskStatus.IN_PROGRESS;
+	}
+
+	public void complete()
+	{
+		System.out.println("Task complete.");
+
+		status = TaskStatus.DONE;
+	}
 }

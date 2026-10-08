@@ -1,9 +1,8 @@
-package dev.pahomov.taskflow;
+package dev.pahomov.taskflow.model;
 
 import java.util.List;
 import java.util.LinkedList;
-
-import dev.pahomov.taskflow.Project;
+import java.util.NoSuchElementException;
 
 public class User
 {
@@ -31,7 +30,7 @@ public class User
 			{ this.projects.remove(project); }
 		}
 
-		System.out.println("There is no such project.");
+		throw new NoSuchElementException("No such project");
 	}
 
 	public Project getProject(String projName)
@@ -42,7 +41,7 @@ public class User
 			{ return project; }
 		}
 
-		System.out.println("There is no such project.");
+		thow new NoSuchElementException("No such project.");
 		return null;
 	}
 }
