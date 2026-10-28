@@ -41,7 +41,6 @@ public class User
 			{ return project; }
 		}
 
-		thow new NoSuchElementException("No such project.");
-		return null;
+		throw new NoSuchElementException("No such project.");
 	}
 }
